@@ -1,0 +1,523 @@
+/*----------------------------------------------------------------------------------------
+AUTHOR
+Laurel Walker Davis
+CPSC 5200
+Fall Term B - 2023
+Module 7: Final Project
+
+DESCRIPTION
+This css file is the stylesheet for the CyberMonk website pages. 
+
+ASSOCIATED FILES
+Header.html			Welcome.php			Examen.php					contemplation.txt
+BackBar.html		Login.php			ExamenSubmit.php			examen.txt
+Footer.html			Account.php			Contemplation.php			lectio.txt
+Navigation.php		Logout.php			ContemplationSubmit.php		monks.txt
+index.php			Leaving.php			LifeReview.php				Design.css
+Signup.php			LectioDivina.php	contemplation-images.json	
+Landing.php			LectioSubmit.php	psalms.txt					
+----------------------------------------------------------------------------------------*/
+
+h1, h2, h3, h4 {
+	margin-top: 0em;
+	font-family: "Courier New", "sans-serif";
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+
+
+.content-container {
+	margin: 0;
+	padding: 2%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12pt;
+	font-family: "Arial",  sans-serif;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+a {
+	text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+	color: #ffac33;
+}
+
+
+
+/* -----------------HEADER-------------------- */
+
+.banner {
+ 	width: 100%;
+ 	background-color: #ffac33;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+}
+
+.banner img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+/* -----------------header-------------------- */
+
+
+
+
+/* -----------------NAVIGATION----------------- */
+.navigation {
+	position: relative;
+	z-index: 1;
+}
+
+.navigation ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	position: sticky;
+	top: 0;
+}
+
+.navigation li {
+	float: left;
+}
+
+/* 
+.navigation li a, .dropdown, .dropbtn {
+	font-family: "Courier New", "sans-serif";
+	font-size: 16pt;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	background-color: inherit;
+}
+ */
+
+.navigation li a:hover {
+	background-color: #ffac33;
+	color: black;
+}
+
+.navigation a.active {
+	background-color: #ffac33;
+}
+
+#accountTab {
+	float: right;
+}
+
+
+/* -----------------navigation----------------- */
+
+
+
+
+/* -----------------SIGNUP----------------- */
+
+
+/* form styles */
+fieldset {
+	border: none;
+	font-family: "Courier New", "sans-serif";
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 120%;
+}
+
+legend {
+	padding-top: 20px;
+	font-family: "Courier New", "sans-serif";
+	font-size: 140%;
+}
+
+.label {
+	float: left;
+	width: 50%;
+	text-align: right;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+input[type="text"], [type="email"] {
+	font-family: "Arial", "sans-serif";
+	border: solid #ffac33;
+	border-width: thin;
+	border-radius: 4px;
+	width: 15%;
+	float: left;
+}
+
+input[type="text"]:focus, [type="email"]:focus {
+	border: solid #333;
+}
+
+
+input[type="submit"] {
+	clear: both;
+	display: block;
+	font-family: "Courier New", "sans-serif";
+	color: white;
+	background-color: #ffac33;
+	font-size: 120%;
+	width: 150pt;
+	margin-top: 3%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border-width: thin;
+	border-radius: 4px;
+}
+
+.switch {
+	font-family: "Arial",  sans-serif;
+	display: block;
+	text-align: center;
+	color: #8c0b08;
+	font-size: 80%;
+}
+
+
+/* -----------------signup----------------- */
+
+
+
+
+/* -----------------WELCOME-------------------- */
+
+.welcome {
+	margin-top: 5%;
+	margin-bottom: 20%;
+}
+
+#link {
+	font-family: "Courier New", "sans-serif";
+	font-weight: bold;
+	font-size: 120%;
+	color: #ffac33;
+}
+
+#link:hover {
+	background-color: #ffac33;
+	color: black;
+}
+
+.monk {
+	font-family: "Courier New", "sans-serif";
+	font-weight: bold;
+	font-size: 120%;
+}
+
+/* -----------------welcome----------------- */
+
+
+
+/* -----------------EXERCISE PAGES-------------------- */
+
+.exercise-description {
+	font-size: 110%;
+}
+
+.steps {
+	width: 100%;
+}
+
+ol li {
+	font-family: "Courier New", "sans-serif";
+	list-style-type: decimal; 
+	border: solid black;
+	border-width: thin;
+	border-radius: 4px;
+	padding: 1%;
+	height: 90%;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background: #f1f1f1;
+}
+
+li {
+  margin: 10px 0; 
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: both;
+  min-height: 40px;
+  line-height: 20px;
+}
+
+.textarea[contenteditable]:empty::before {
+  content: "Enter your reflections here.";
+  color: gray;
+}
+
+#benediction {
+	width: 400pt;
+	margin-top: 3%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-family: "Courier New", "sans-serif";
+	font-size: 140%;
+}
+
+/* -----------------exercise pages----------------- */
+
+/* -----------------LECTIO DIVINA-------------------- */
+.verses {
+	border: solid #ffac33;
+	border-width: bold;
+	border-radius: 4px;
+	padding: 1%;
+	width: 60%;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+	padding-top: 20px;
+	font-family: "Courier New", "sans-serif";
+	font-size: 140%;
+}
+
+.verses h1 {
+	padding-top: 20px;
+	font-family: "Courier New", "sans-serif";
+	font-size: 140%;
+	text-align: center;
+}
+
+/* -----------------lectio divina----------------- */
+
+/* -----------------CONTEMPLATION-------------------- */
+.contemplation {
+	border: solid #ffac33;
+	border-width: bold;
+	border-radius: 4px;
+	padding: 1%;
+	width: 70%;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+	padding-top: 20px;
+	font-family: "Courier New", "sans-serif";
+}
+
+.contemplation img {
+	max-width: 700px;
+	height: auto; /* Maintain aspect ratio */
+	display: block; /* Remove extra space below the image */
+	margin: 0 auto; /* Center the image */
+}
+
+.contemplation h1 {
+	padding-top: 20px;
+	font-family: "Courier New", "sans-serif";
+	font-size: 140%;
+	text-align: center;
+}
+
+
+/* -----------------contemplation----------------- */
+
+
+/* -----------------LIFE REVIEW-------------------- */
+.life-review {
+	font-family: "Arial", "sans-serif";
+	border: solid #ffac33;
+	border-width: thin;
+	border-radius: 4px;
+	padding: 1%;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+    max-height: 300px; /* Set the maximum height to control the scroll */
+	overflow-y: auto;	/* make scrollable */
+}
+
+
+/* -----------------life review----------------- */
+
+
+/* -----------------FOOTER-------------------- */
+
+.footer {
+	background-color: gray;
+	margin: 15px;
+}
+
+.mission {
+	float: left;
+	width: 45%;
+	text-align: justify;
+	text-justify: inter-character;
+	letter-spacing: 1px;
+	padding: 5px;
+}
+
+.partners {
+	float: right;
+	width: 45%;
+	letter-spacing: 0px;
+	padding: 5px;
+}
+
+.partners ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+}
+
+.partners a {
+	text-decoration: none;
+    color: #000;
+}
+
+.partners a:hover {
+	color: #ffac33;
+}
+
+.footer-column {
+	float: left;
+	font-size: 12pt;
+	font-family: "Arial",  sans-serif;
+	letter-spacing: 1px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.left {
+	 width: 40%;
+}
+
+.right {
+	 width: 60%;
+}
+
+
+.back-link {
+	clear: both;
+	display: flex;
+	margin-left: 5px;
+	align-items: center;
+	text-decoration: none;
+    color: #333;
+}
+
+.back-link:hover {
+	color: #ffac33;
+}
+
+.small-icon {
+	width: 30px;
+	height: auto;
+	margin-right: 5px;
+}
+
+/* -----------------footer-------------------- */
+
+
+
+
+/* -----------------NAVIGATION----------------- */
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  font-family: "Courier New", "sans-serif";
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.active {
+  background-color: #ffac33;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 0px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #ffac33;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffac33;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* -----------------navigation----------------- */
